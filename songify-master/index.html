@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Songify</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Permanent+Marker|Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julee" rel="stylesheet">
+  </head>
+
+  <body>
+    <section class="welcome-screen">
+
+      <div class="input-wrapper">
+        <img src="C:\Users\hp\Desktop\New folder\songify-master\img\logo.png">
+
+        <h1> Welcome to Songify </h1>
+        <div class ="login-h3">
+        <h3>Enter your name </h3>
+      </div>
+        <form action="javascript: void(0)">
+          <input type="text" placeholder="Name" id="name-input" required>
+         <!--<input type="email" placeholder="Email (test@acadview.com)" id="email-input" required>
+          <input type="password" placeholder="Password (JavascriptRocks)" id="password-input" required>-->
+          <button> GO </button>
+        </form>
+      </div>
+      <!--<div class="alert alert-danger alert-dismissible hidden" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Error!</strong> Please enter proper credentials (Hint: email='test@acadview.com', password='JavascriptRocks').
+      </div>-->
+    </section>
+    <div class="container-fluid">
+      <div class="main hidden">
+        <header>
+          <nav class="navbar navbar-default navbar-fixed-top" id="header">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="#">Brand</a> -->
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left">
+
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="user-name"><a href="#">Welcome ashwingairola</a></li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+        </header>
+
+       <div class="row">
+          <div class="col-md-2" id="menu">
+            <ul class="nav nav-pills nav-stacked">
+              <li role="presentation"><a href="#">Recently Played</a></li>
+              <li role="presentation" class="active"><a href="#">Songs</a></li>
+              <li role="presentation"><a href="#">Albums</a></li>
+              <li role="presentation"><a href="#">Artists</a></li>
+              <li role="presentation"><a href="#">Radio</a></li>
+              <li role="presentation"><a href="#">people</a></li>
+              <li role="presentation"><a href="#">My Music</a></li>
+              <li role="presentation"><a href="#">New Release</a></li>
+              <li role="presentation"><a href="#">Music langwage</a></li>
+          </div>
+
+          <div class="col-md-10" id="main">
+            <div class="jumbotron">
+              <div class= "my_logo">
+              <table>
+              <tbody>
+                <tr>
+                  <td>
+              <img src="C:\Users\hp\Desktop\New folder\songify-master\img\logo.png">
+            </td>
+            <td>
+              <h1>SONGIFY</h1>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+            </div>
+
+            <section class="content">
+              <audio src="song1.mp3"></audio>
+              <table id="songs">
+                <thead class="list-headers">
+                  <tr>
+                    <td> # </td>
+                    <td> TITLE </td>
+                    <td> ARTIST </td>
+                    <td> ALBUM </td>
+                    <td> <span class="fa fa-calendar-plus-o"></span> </td>
+                  </tr>
+                </thead>
+                <!-- <div class="song-list"> -->
+                  <tbody>
+                    <tr class="song" id="song1">
+                      <td class="song-number"></td>
+                      <td class="song-name"></td>
+                      <td class="song-artist"></td>
+                      <td class="song-album"></td>
+                      <td class="song-length"></td>
+                    </tr>
+                    <tr class="song" id="song2">
+                      <td class="song-number"></td>
+                      <td class="song-name"></td>
+                      <td class="song-artist"></td>
+                      <td class="song-album"></td>
+                      <td class="song-length"></td>
+                    </tr>
+                    <tr class="song" id="song3">
+                      <td class="song-number"></td>
+                      <td class="song-name"></td>
+                      <td class="song-artist"></td>
+                      <td class="song-album"></td>
+                      <td class="song-length"></td>
+                    </tr>
+                    <tr class="song" id="song4">
+                      <td class="song-number"></td>
+                      <td class="song-name"></td>
+                      <td class="song-artist"></td>
+                      <td class="song-album"></td>
+                      <td class="song-length"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- </div> -->
+            </section>
+          </div>
+        </div>
+        <nav class="navbar navbar-default navbar-fixed-bottom" id="footer">
+          <div class="controls">
+            <div class="current-song-wrapper">
+              <img src="" class="current-song-image">
+              <div>
+                <p class="current-song-name"></p>
+                <p class="current-song-album"></p>
+              </div>
+            </div>
+            <div class="main-controls">
+              <div class="player-buttons">
+                <i class="fa fa-random clickable disabled" aria-hidden="true"></i>
+                <i class="fa fa-fast-backward clickable" aria-hidden="true"></i>
+                <i class="fa fa-step-backward clickable" aria-hidden="true"></i>
+                <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                <i class="fa fa-step-forward clickable" aria-hidden="true"></i>
+                <i class="fa fa-fast-forward clickable" aria-hidden="true"></i>
+                <i class="fa fa-repeat disabled clickable" aria-hidden="true"></i>
+                <i class="fa fa-microphone clickable" aria-hidden="true"></i>
+              </div>
+              <div class="progress-wrapper">
+                <span class="time-elapsed"> </span>
+                <div class="player-progress">
+                  <div class="progress-filled"> </div>
+                </div>
+                <span class="song-duration"></span>
+              </div>
+            </div>
+            <div class="right-wrapper">
+              <div class="playlist-length">
+                <span>Songs in playlist: </span><span id="num-of-songs"></span>
+              </div>
+              <div class="volume-controls">
+                <i class="fa fa-volume-up clickable" aria-hidden="true" id="volume-toggle"></i>
+                <input type="range" name="volume" class="player-slider" min="0" max="1" step="0.05" value="1">
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="jsmediatags.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

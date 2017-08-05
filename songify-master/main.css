@@ -1,0 +1,398 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: white;
+}
+
+.welcome-screen h1,h2,h3,h4,h5,h6 {
+  color: #fff;
+}
+
+.welcome-screen button {
+  background-color: #1db954;
+  border: none;
+  color: #fff;
+}
+
+.welcome-screen {
+  overflow: auto;
+  position: relative;
+  text-align: center;
+}
+
+.welcome-screen:before {
+
+  content: "";
+  position: fixed;;
+  z-index: -1;
+
+  display: block;
+  background-image: url('img/login_background.jpg');
+  background-size: cover;
+  width: 110%;
+  height: 110%;
+  left: -5%;
+  top: -5%;
+}
+
+.input-wrapper {
+  color: white;
+  align-items: center;
+  display: inline-block;
+  margin-top: 100px;
+}
+
+.input-wrapper button, .input-wrapper input {
+  display: block;
+  width: 25rem;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+
+
+.col-md-2, .col-md-10 {
+  height: 600px;
+}
+
+/* Styling for the menu on the left */
+#menu {
+  background-color: #302f1f; /* Making the background dark */
+  padding: 0;
+  border-color: black;
+}
+
+#menu a {
+  color: rgb(160,160,160);  /* Giving text color to links in the menu */
+}
+
+#menu .nav-stacked .active a {  /* Apply the following styles to an active link in the menu */
+  color: white;
+  background: none;
+  border-left: 4px solid #1db954;
+}
+
+#menu .nav-stacked a:hover {  /* Apply the following styles in all links in the menu while hovering above them */
+  color: #ffff66;
+  background: none;
+}
+
+.nav-pills>li>a {
+  border-radius: 0;
+
+}
+
+.nav>li>a:focus {
+  background: none;
+}
+/* End of menu styles */
+
+/* Styles for the main content in the middle */
+#main {
+  background-color: #302f2f; /* Setting the background color for the main column */
+  padding: 0;
+}
+
+#header {                   /* Styles for the header inside the main column */
+  background-color: #302f2f;
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  max-height: 43px;
+  min-height: 43px;
+}
+
+#search-box span {          /* The span element containing the search icon */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: white;
+  padding: 0 5px 0 5px;
+  height: inherit;
+}
+
+#search-box input {         /* The input box of the search-box */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: 1px solid #fff;
+  padding: 0;
+  height: inherit;
+}
+
+#main .jumbotron {        /* The jumbotron displaying 'Songs' heading and 'PLAY' button. */
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  background: none;
+}
+
+#main .jumbotron h1 {   /* The heading inside the jumbotron */
+  font-size: 35px;
+  font-weight:700;
+}
+
+#main .jumbotron .btn.btn-primary {   /* The 'PLAY' button inside the jumbotron */
+  background-color: #1db954;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  padding: 5px 30px 5px 30px;
+}
+
+.content {
+  margin: 2rem auto;
+  width: 800px;
+}
+
+.list-headers {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.list-headers > div {
+    width: 150px;
+    display: inline-block;
+}
+
+.song > span {
+    display: inline-block;
+    width: 150px;
+    overflow: hidden;
+    height: 1rem;
+}
+
+.list-headers > div:first-child {
+    width: 330px;
+}
+
+.song > span:first-child {
+    width: 330px;
+}
+
+.song-list .song {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    min-height: 30px;
+    cursor: pointer;
+}
+
+#footer {
+    height: 80px;
+    background-color: #302f2f;
+    padding-top: 1rem;
+    border-color: black;
+
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.main-controls {
+  margin-left: -7rem;
+
+}
+
+.player-buttons {
+    display:flex;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-buttons .fa {
+    margin-right: 2rem;
+}
+
+.fa.disabled {
+    color: gray;
+}
+
+.hidden {
+    display: none;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.progress-wrapper {
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-wrapper span {
+    color: #959595;
+}
+
+.player-progress {
+    height: 8px;
+    width: 700px;
+    background-color: #3d3d3d;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.progress-filled {
+    background-color: #959595;
+    height: 8px;
+    border-radius: 4px;
+    width: 0;
+
+}
+
+.volume-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 0.8rem;
+  margin-right: 4rem;
+}
+
+#volume-toggle {
+  font-size: 20px;
+}
+
+.player-slider {
+  -webkit-appearance: none;
+  height: 8px;
+  width: 100px !important;
+  background-color: #3d3d3d;
+  border-radius: 4px;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #3d3d3d;
+  cursor: pointer;
+}
+
+input[type=range] {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.content {
+    position: relative;
+    font-family: 'Comfortaa', cursive;
+
+}
+
+
+.song:hover{
+  color:#ffff66;
+}
+.list-headers:hover{
+  color: #ffff66;
+}
+.current-song-wrapper {
+    bottom: 0;
+    display: flex;
+    width: 300px;
+    margin-left: 1rem;
+}
+
+.current-song-image {
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.current-song-name {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    overflow: hidden;
+    height: 2rem;
+}
+
+.current-song-album {
+    overflow: hidden;
+    height: 1rem;
+}
+
+/*DataTables overrides*/
+table.dataTable tbody tr {
+background-color: initial;
+}
+
+.dataTable.no-footer#songs {
+  width: 100%;
+}
+
+#songs_info {
+display: none;
+}
+
+#songs_filter {
+color: #ffff66;
+font-family: 'Comfortaa', cursive;
+
+}
+
+#songs_filter input {
+width: 250px;
+margin-bottom: 1rem;
+font-size: 16px;
+font-family: 'Comfortaa', cursive;
+}
+
+/*Local file upload styles*/
+#file-upload-modal p,input,h1,h2,h3,h4,h5,h6 {
+  color: #000;
+}
+
+.login-h3{
+  color : white;
+}
+
+.my_logo{
+  font-family: 'Julee', cursive;
+  margin: auto;
+  color: 	 #ffff66;
+
+
+}
+
+.user-name{
+  color: #ffff66;
+  font-family: 'Comfortaa', cursive;
+}
+.col-md-2
+{
+  color: transparent;
+  font-family: 'Comfortaa', cursive;
+}
