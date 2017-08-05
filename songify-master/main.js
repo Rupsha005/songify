@@ -49,8 +49,6 @@ var songs = [
 // When the user 'logs in', hide the login page and reveal the dashboard.
 $('.welcome-screen button').on('click', function() {
   var name = $('#name-input').val();
-  //var email = $('#email-input').val();
-  //var password = $('#password-input').val();
   if(name.length > 3) {
     var message = "Welcome, " + name;
     $('.user-name a').text(message);
@@ -59,10 +57,9 @@ $('.welcome-screen button').on('click', function() {
     $('body').css('padding-top', '40px');
     $('body').css('padding-bottom', '80px');
   }
-  else {    // If login fails, display an error notification.
+  else {    
     $('#name-input').addClass('error');
-  //  $('.alert-danger').removeClass('hidden');
-  }
+   }
 });
 
 // When the user clicks on the play/pause icon, toggle the audio accordingly.
